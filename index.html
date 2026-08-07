@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Xander Greeting</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .greeting-card {
+      width: 100%;
+      padding: 32px 24px;
+      border: 2px solid #556B5D;
+      border-radius: 22px;
+      background: #232625;
+      text-align: center;
+    }
+
+    #greeting {
+      margin: 0;
+      color: #F4F1E8;
+      font-size: 42px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="greeting-card">
+    <p id="greeting">Hello, Xander</p>
+  </div>
+
+  <script>
+    function updateGreeting() {
+      const hour = new Date().getHours();
+      let greeting;
+
+      if (hour < 12) {
+        greeting = "Good Morning, Xander";
+      } else if (hour < 18) {
+        greeting = "Good Afternoon, Xander";
+      } else {
+        greeting = "Good Evening, Xander";
+      }
+
+      document.getElementById("greeting").textContent = greeting;
+    }
+
+    updateGreeting();
+    setInterval(updateGreeting, 60000);
+  </script>
+</body>
+</html>

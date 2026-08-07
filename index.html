@@ -5,62 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Xander Greeting</title>
-
-<style>
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    background:transparent;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-
-.greeting-card{
-    width:100%;
-    max-width:420px;
-    margin-left:24px;
-
-    padding:40px 34px;
-
-    background:#2A2725;
-
-    border:1px solid #655346;
-
-    border-radius:30px;
-
-    text-align:left;
-}
-
-.greeting-line{
-    margin:0;
-
-    color:#EDECE9;
-
-    font-size:30px;
-
-    font-weight:500;
-
-    line-height:1.2;
-}
-
-.name{
-    color:#607C6E;
-
-    font-weight:650;
-    font-size:1.05em;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="greeting-card">
-    <p id="greeting" class="greeting-line"></p>
+<div class="card">
+    <p id="greeting" class="title"></p>
 </div>
 
 <script>
